@@ -1,0 +1,5 @@
+$ cd /google/google-cloud-sdk/bin
+
+$ python dev_appserver.py ~/cloudcomplab/helloapp
+
+Start http or https client in port 8080

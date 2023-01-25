@@ -1,0 +1,29 @@
+
+
+
+#After Editing All Files
+
+$ hdfs namenode -format
+
+$ ./start-dfs.sh
+
+$ ./start-yarn.sh
+
+$ jps
+
+#ports
+# Hadoop NameNode UI - 9870
+# individual DataNodes - 9864
+# YARN Resource Manager - 8088
+
+#to run wordcount
+
+$ hdfs dfs -put ~/data input
+$ hadoop jar ../share/mapreduce-examples-3.3.4.jar wordcount input output
+$ hdfs dfs -cat output/_SUCCESS
+$ hdfs dfs -cat output/part-r-00000
+$ cat ~/data/testing.txt
+
+
+
+
